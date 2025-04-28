@@ -70,6 +70,14 @@ header {
   height: 50px;
 }
 
+.hamburger-icon[aria-expanded="false"]{
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+}
+
 /* Navigation */
 .main-nav {
   display: block;
@@ -104,6 +112,7 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   position: relative;
+  z-index: 20;
 }
 
 .cart-count {

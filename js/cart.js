@@ -26,6 +26,7 @@ function addToCart(productId, productName, productPrice) {
   if (existingItem) {
     // Increase quantity if already in cart
     existingItem.quantity += 1;
+    displayCartDropdown();
   } else {
     // Add new item to cart
     cart.push({
@@ -35,6 +36,7 @@ function addToCart(productId, productName, productPrice) {
       quantity: 1,
       total: price,
     });
+    displayCartDropdown();
   }
 
   // Save cart and update UI

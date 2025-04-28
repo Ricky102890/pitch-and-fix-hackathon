@@ -1,4 +1,4 @@
-# Basic Features (HTML/CSS/Basic JS)
+  # Basic Features (HTML/CSS/Basic JS)
 
 - Enhanced Product Filters
   - Add filter options by price range, category, etc.

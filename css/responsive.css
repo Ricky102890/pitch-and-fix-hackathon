@@ -14,6 +14,62 @@
 
 /* Mobile Styles */
 @media screen and (max-width: 576px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .hamburger-icon[aria-expanded="false"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    margin-left: auto;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  .hamburger-icon[aria-expanded="false"] ~ .main-nav {
+    display: none;
+  }
+  
+  .hamburger-icon[aria-expanded="true"] {
+    display: none;
+  }
+
+  .hamburger-icon[aria-expanded="true"] ~ .main-nav {
+    display: block;
+    position: relative;
+    transition: all 700ms ease-in-out;
+  }
+
+  .close-btn.open {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: all 700ms ease-in-out;
+  }
+  #nav-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #nav-item {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }

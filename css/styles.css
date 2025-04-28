@@ -69,7 +69,7 @@ header {
 .logo {
   height: 50px;
 }
-
+/* Hides the navigation icon, Viewports larger than mobile only */
 .hamburger-icon[aria-expanded="false"]{
   display: none;
   width: 24px;

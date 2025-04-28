@@ -14,11 +14,13 @@
 
 /* Mobile Styles */
 @media screen and (max-width: 576px) {
+  /* Allows Navigation to follow user during scrolling */
   header {
     position: sticky;
     top: 0;
     z-index: 10;
   }
+  /* Displays a navigation icon to expand navigation */
   .hamburger-icon[aria-expanded="false"] {
     display: inline-block;
     width: 24px;
@@ -29,20 +31,21 @@
     margin-right: 2rem;
     cursor: pointer;
   }
+  /* Hide navigation links when viewport is mobile */
   .hamburger-icon[aria-expanded="false"] ~ .main-nav {
     display: none;
   }
-  
+  /* Hides navigation icon */
   .hamburger-icon[aria-expanded="true"] {
     display: none;
   }
-
+  /* Displays navigation links when icon is clicked */
   .hamburger-icon[aria-expanded="true"] ~ .main-nav {
     display: block;
     position: relative;
     transition: all 700ms ease-in-out;
   }
-
+  /* Displays when mobile navigation link list is displayed, gives option to hide nav list again */
   .close-btn.open {
     width: 24px;
     height: 24px;

@@ -19,59 +19,65 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: all 700ms ease-in-out;
+  }
+  header.show {
+    transition: all 700ms ease-in-out;
   }
 
   /* Displays a navigation icon to expand navigation */
   .hamburger-icon[aria-expanded="false"] {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background: transparent;
     border: none;
-    margin-left: auto;
-    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-right: auto;
     cursor: pointer;
+    transition: all 400ms ease-in-out;
+  }
+  .hamburger-icon[aria-expanded="true"] {
+    display: inline-block;
+    justify-self: end;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    margin-left: 2rem;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+  }
+  .hamburger-icon.show[aria-expanded="true"] {
+    transform: rotate(90deg);
   }
 
   /* Hide navigation links when viewport is mobile */
   .hamburger-icon[aria-expanded="false"] ~ .main-nav {
-    display: none;
-  }
-
-  /* Hides navigation icon */
-  .hamburger-icon[aria-expanded="true"] {
-    display: none;
+    display: block;
+    opacity: 0;
+    margin-right: auto;
+    transition: all 400ms ease-in-out;
   }
 
   /* Displays navigation links when icon is clicked */
-  .hamburger-icon[aria-expanded="true"] ~ .main-nav {
-    display: block;
+  .hamburger-icon[aria-expanded="true"] ~ .main-nav.show {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
-    transition: all 700ms ease-in-out;
-  }
-
-  /* Displays when mobile navigation link list is displayed, gives option to hide nav list again */
-  .close-btn.open {
-    width: 24px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    position: absolute;
-    top: 0;
-    right: -4rem;
-    cursor: pointer;
-    transform: rotate(90deg);
-    transition: all 700ms ease-in-out;
+    margin-right: auto;
+    opacity: 1;
+    transition: all 400ms ease-in-out;
   }
 
   /* Fits navigation list in header as a column */
   #nav-items {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   /* Centers navigation links in header */
@@ -79,8 +85,9 @@
     display: inline-block;
     margin: 0;
     text-align: center;
+    font-size: .75rem;
+    font-weight: bold;
   }
-
   .hero h1 {
     font-size: 2rem;
   }

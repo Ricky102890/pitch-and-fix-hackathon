@@ -20,7 +20,7 @@
     top: 0;
     z-index: 10;
   }
-  
+
   /* Displays a navigation icon to expand navigation */
   .hamburger-icon[aria-expanded="false"] {
     display: inline-block;
@@ -106,6 +106,6 @@
     margin-bottom: 10px;
   }
 
-  .newsletter button {
-  }
+  /* .newsletter button {
+  } */
 }

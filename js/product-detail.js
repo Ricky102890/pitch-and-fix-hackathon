@@ -147,7 +147,7 @@ function showAddToCartMessage() {
     setTimeout(() => {
       messageElement.remove();
     }, 300);
-  });
+  }, 3000);
 }
 
 // Setup color selection

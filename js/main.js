@@ -58,9 +58,10 @@ function showMessage(message, type) {
   document.body.appendChild(messageElement);
 
   // Remove after 3 seconds
+  // Added 3000ms to function
   setTimeout(() => {
     messageElement.remove();
-  });
+  }, 3000);
 }
 
 // Setup newsletter form

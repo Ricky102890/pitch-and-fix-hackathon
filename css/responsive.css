@@ -111,28 +111,30 @@
 
   /* .newsletter button {
   } */
-  .footer-column h3 {
-    text-align: center;
-  }
   .footer-columns {
+    margin: 0 auto 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     justify-content: center;
     align-items: center;
   }
+
   .footer-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 12px;
   }
+
+  .footer-column h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
   .footer-column ul li {
     text-align: center;
   }
-  .social-links li {
-    margin: 0 auto;
-  }
-  .social-links li a {
-    text-align: center;
-  }
+
 }

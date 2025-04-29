@@ -21,9 +21,6 @@
     z-index: 10;
     transition: all 700ms ease-in-out;
   }
-  header.show {
-    transition: all 700ms ease-in-out;
-  }
 
   /* Displays a navigation icon to expand navigation */
   .hamburger-icon[aria-expanded="false"] {

@@ -59,7 +59,8 @@ function removeFromCart(productId) {
 
   if (itemIndex > -1) {
     // Remove item
-    cart.splice(itemIndex, 2);
+    // array method delete count was set to 2, adjusted to 1
+    cart.splice(itemIndex, 1);
 
     // Save cart and update UI
     saveCart();
@@ -350,13 +351,13 @@ function setupPromoCode() {
 
 // Setup checkout button
 function setupCheckoutButton() {
-  const checkoutBtn = document.getElementById("checkout-btn");
+  const checkoutBtn = document.getElementById("checkoutBtn");
 
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", function () {
       // Redirect to checkout page (or show modal)
       alert("Proceeding to checkout...");
-      // window.location.href = 'checkout.html';
+      // window.location.href = '../pages/checkout.html';
     });
   }
 }

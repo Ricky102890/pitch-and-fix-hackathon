@@ -51,11 +51,21 @@ function setupEventListeners() {
 function showMessage(message, type) {
   // Create message element
   const messageElement = document.createElement("div");
-  messageElement.className = `message ${type}`;
+  messageElement.className = `message-${type}`;
   messageElement.textContent = message;
 
   // Add to body
   document.body.appendChild(messageElement);
+
+  // Fades In
+  setTimeout(() => {
+    messageElement.classList.add('fade');
+  });
+
+  // Fades Out before vanishing
+  setTimeout(() => {
+    messageElement.classList.remove('fade');
+  }, 2000);
 
   // Remove after 3 seconds
   // Added 3000ms to function

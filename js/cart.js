@@ -17,16 +17,14 @@ function saveCart() {
 }
 
 // Add product to cart
-function addToCart(productId, productName, productPrice) {
-  const price = productPrice;
-
+function addToCart(productId, productName, productPrice) { 
+  let price = productPrice;
   // Check if product already in cart
   const existingItem = cart.find((item) => item.id === productId);
-
   if (existingItem) {
-    // Increase quantity if already in cart
     existingItem.quantity += 1;
-    cart.push(existingItem);
+    existingItem.price = (existingItem.price * existingItem.quantity);
+    // Increase quantity if already in cart
     // Display live update in Cart or any additions
     displayCartDropdown();
   } else {
@@ -152,6 +150,7 @@ function displayCartDropdown() {
                 <div class="item-details">
                     <h4>${item.name}</h4>
                     <p>${item.price}</p>
+                    <span>Quantity: ${item.quantity}<span>
                 </div>
                 <button class="remove-item" data-product-id="${item.id}">×</button>
             `;

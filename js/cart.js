@@ -17,14 +17,13 @@ function saveCart() {
 }
 
 // Add product to cart
-function addToCart(productId, productName, productPrice) { 
+function addToCart(productId, productName, productPrice) {
   let price = productPrice;
   // Check if product already in cart
   const existingItem = cart.find((item) => item.id === productId);
   if (existingItem) {
-    existingItem.quantity += 1;
-    existingItem.price = (existingItem.price * existingItem.quantity);
     // Increase quantity if already in cart
+    existingItem.quantity += 1;
     // Display live update in Cart or any additions
     displayCartDropdown();
   } else {
@@ -58,12 +57,12 @@ function removeFromCart(productId) {
 
   if (itemIndex > -1) {
     // Remove item
-    // array method delete count was set to 2, adjusted to 1
+    // array method delete count was set to 2, adjusted to 1 to delete single item
     cart.splice(itemIndex, 1);
 
     // Save cart and update UI
-    saveCart();
     updateCartCount();
+    saveCart();
 
     // If on cart page, update cart display
     if (document.querySelector(".cart-items-list")) {
@@ -102,8 +101,10 @@ function updateItemQuantity(productId, newQuantity) {
 function updateCartCount() {
   const cartCountElement = document.querySelector(".cart-count");
   if (cartCountElement) {
-    const itemCount = cart.length;
-    cartCountElement.textContent = itemCount;
+    // Loops through Cart Items, Add value of number of different items(separate items) with the addition of multiples of same item
+    // cartCountElement.textContent = cartCount;
+    let cartCount = cart.length;
+    cartCountElement.textContent = cartCount;
   }
 }
 
@@ -172,7 +173,8 @@ function displayCartDropdown() {
     // Update total
     let total = 0;
     cart.forEach((item) => {
-      total += parseFloat(item.price);
+      // Added statement that multiplies the price of item by it's quantity to give accurate total
+      total += parseFloat(item.price * item.quantity);
     });
 
     cartTotalAmount.textContent = total.toFixed(2);

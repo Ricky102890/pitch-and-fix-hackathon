@@ -527,6 +527,28 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
+/* Product Details */
+/* Warranty */
+.warranty-details {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+.warranty-persons {
+  width: 200px;
+  height: auto;
+  display: none;
+  font-size: .75rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: all 2s ease-in-out;
+}
+.warranty-details:hover  .warranty-persons{
+  transition: all 2s ease-in-out;
+  display: block;
+}
+
 
 /* About Us */
 #ourStory {

@@ -133,6 +133,7 @@ function changeMainImage(thumbnail) {
 }
 
 function changeMainImg(thumbnail) {
+  
   // Function intentionally left incomplete
   console.log("Wrong function called");
 }

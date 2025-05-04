@@ -31,7 +31,7 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">0</span>
             </div>
-            <div class="cart-dropdown" style="display: none;">
+            <div class="cart-dropdown">
                 <div class="cart-items">
                     <!-- Cart items will be added here by JavaScript -->
                 </div>
@@ -52,7 +52,7 @@
             <div class="thumbnail-gallery">
                 <!-- Intentional bug: onclick handlers using incorrect function names -->
                 <img src="../images/product1.jpg" alt="Wireless Headphones - Front" class="thumbnail active" onclick="changeMainImage(this)">
-                <img src="../images/product1-side.jpg" alt="Wireless Headphones - Side" class="thumbnail" onclick="changeMainImage(this)">
+                <img src="../images/" alt="Wireless Headphones - Side" class="thumbnail" onclick="changeMainImage(this)">
                 <img src="../images/product1-back.jpg" alt="Wireless Headphones - Back" class="thumbnail" onclick="changeMainImg(this)">
                 <img src="../images/product1-case.jpg" alt="Wireless Headphones - Case" class="thumbnail" onclick="switchImage(this)">
             </div>
@@ -99,14 +99,16 @@
                 <h3>Quantity:</h3>
                 <div class="quantity-controls">
                     <!-- Intentional bug: decrease button has incorrect id -->
-                    <button id="decrease-qty" class="quantity-btn">-</button>
+                    <!-- FIXED -->
+                    <button id="decrease-quantity" class="quantity-btn">-</button>
                     <input type="text" id="quantity" value="1" min="1" max="10">
                     <button id="increase-quantity" class="quantity-btn">+</button>
                 </div>
             </div>
             <div class="purchase-actions">
                 <!-- Intentional bug: missing data-product-price attribute -->
-                <button id="add-to-cart" class="add-to-cart-btn" data-product-id="1" data-product-name="Wireless Headphones">Add to Cart</button>
+                <!-- FIXED -->
+                <button id="add-to-cart" class="add-to-cart-btn" data-product-id="1" data-product-name="Wireless Headphones" data-product-price="99.99">Add to Cart</button>
                 <button id="buy-now" class="buy-now-btn">Buy Now</button>
                 <button id="add-to-wishlist" class="wishlist-btn">
                     <i class="far fa-heart"></i>

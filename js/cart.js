@@ -128,6 +128,8 @@ function displayCartDropdown() {
   const cartItemsContainer = document.querySelector(
     ".cart-dropdown .cart-items"
   );
+  const cartDisplay = document.querySelector(".cart-dropdown");
+  cartDisplay.style.display = 'block';
   const cartTotalAmount = document.getElementById("cart-total-amount");
 
   if (cartItemsContainer) {

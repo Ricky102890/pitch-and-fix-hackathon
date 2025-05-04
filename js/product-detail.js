@@ -73,7 +73,7 @@ function setupQuantityControls() {
   if (increaseBtn && quantityInput) {
     increaseBtn.addEventListener("click", function () {
       let currentValue = parseInt(quantityInput.value);
-      quantityInput.value = currentValue + 1;
+      currentValue += 1;
     });
   }
 

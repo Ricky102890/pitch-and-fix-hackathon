@@ -287,6 +287,84 @@ header {
   margin-bottom: 2rem;
 }
 
+/* Product Details */
+.product-detail-container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+#main-product-img {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  object-fit: cover;
+  grid-column: 1 / all;
+}
+.product-images {
+  width: 100%;
+  height: auto;
+  grid-column: 1 / all;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-detail-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, .2);
+}
+.product-tabs {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  gap: 20px;
+}
+.tabs-header {
+  grid-column: 1 / all;
+}
+.tabs-content {
+  width: 100%
+  margin-right: auto;
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+.tab-content {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+/* Warranty */
+.warranty-details {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+.warranty-persons {
+  width: 200px;
+  height: auto;
+  margin: 0;
+  display: none;
+  font-size: .75rem;
+  position: absolute;
+  top: 5px;
+  left: 90px;
+  transition: all 2s ease-in-out;
+}
+.warranty-details:hover  .warranty-persons{
+  display: block;
+  transition: all 2s ease-in-out;
+}
 .product-grid,
 .category-grid {
   display: grid;
@@ -530,28 +608,7 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
-/* Product Details */
-/* Warranty */
-.warranty-details {
-  display: block;
-  position: relative;
-  margin: 0;
-}
-.warranty-persons {
-  width: 200px;
-  height: auto;
-  margin: 0;
-  display: none;
-  font-size: .75rem;
-  position: absolute;
-  top: 5px;
-  left: 90px;
-  transition: all 2s ease-in-out;
-}
-.warranty-details:hover  .warranty-persons{
-  display: block;
-  transition: all 2s ease-in-out;
-}
+
 
 
 /* About Us */

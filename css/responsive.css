@@ -2,6 +2,10 @@
 
 /* Tablet Styles */
 @media screen and (max-width: 968px) {
+  .product-details-container {
+    display: flex;
+    flex-direction: column;
+  }
   .product-grid,
   .category-grid {
     grid-template-columns: repeat(2, 1fr);

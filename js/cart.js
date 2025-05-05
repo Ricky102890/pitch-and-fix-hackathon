@@ -26,7 +26,8 @@ function addToCart(productId, productName, productPrice) {
     existingItem.quantity += 1;
     // Display live update in Cart or any additions
     displayCartDropdown();
-  } else {
+  } 
+  else {
     // Add new item to cart
     cart.push({
       id: productId,
@@ -101,8 +102,7 @@ function updateItemQuantity(productId, newQuantity) {
 function updateCartCount() {
   const cartCountElement = document.querySelector(".cart-count");
   if (cartCountElement) {
-    // Loops through Cart Items, Add value of number of different items(separate items) with the addition of multiples of same item
-    // cartCountElement.textContent = cartCount;
+    // Find a way to add multiples of same item to cart count
     let cartCount = cart.length;
     cartCountElement.textContent = cartCount;
   }
@@ -117,7 +117,8 @@ function toggleCart() {
       cartDropdown.style.display = "block";
       // Populate cart dropdown
       displayCartDropdown();
-    } else {
+    } 
+    else {
       cartDropdown.style.display = "none";
     }
   }
@@ -331,7 +332,8 @@ function applyPromoCode(code) {
     updateCartTotals();
 
     return true;
-  } else {
+  } 
+  else {
     alert("Invalid promo code");
     return false;
   }

@@ -68,7 +68,6 @@ function showMessage(message, type) {
   }, 2000);
 
   // Remove after 3 seconds
-  // Added 3000ms to function
   setTimeout(() => {
     messageElement.remove();
   }, 3000);
@@ -133,7 +132,7 @@ function changeMainImage(thumbnail) {
 }
 
 function changeMainImg(thumbnail) {
-  
+  // !fix
   // Function intentionally left incomplete
   console.log("Wrong function called");
 }

@@ -124,10 +124,10 @@
     margin: 0 auto;
   }
 
-  .newsletter button {
-    /*! something goes here */
-  }
-  
+  /* .newsletter button {
+    
+  } */
+
   .footer-columns {
     margin: 0 auto 2rem;
     display: grid;

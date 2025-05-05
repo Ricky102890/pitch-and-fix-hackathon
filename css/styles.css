@@ -639,6 +639,7 @@ footer {
 .about-intro {
   grid-column: 1 / all;
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .about-main {
@@ -646,7 +647,14 @@ footer {
   height: auto;
   margin: 0 auto;
 }
-
+.about-main p {
+  text-indent: 1rem;
+  width: 600px;
+  margin-bottom: 2rem;
+}
+.about-main img {
+  margin-bottom: .5rem;
+}
 .about-col-one {
   width: 100%;
   display: flex;
@@ -655,9 +663,8 @@ footer {
   flex-wrap: wrap;
 }
 
-.about-col-two {
-  /*! something goes here */
-}
+/* .about-col-two {
+} */
 
 /* Blog */
 .blog-wrapper {
@@ -669,6 +676,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  background: url(/images/blog-bkg.webp);
+  color: white;
 }
 
 .blog-intro {
@@ -683,6 +692,7 @@ footer {
 
 .blog-img h1 {
   font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
 }
 
 .blog-output-wrapper { 
@@ -693,10 +703,13 @@ footer {
 }
 
 .blog-output {
+  padding: 1rem 2rem;
   grid-column: 1 / 1;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(to bottom, #005a9e, transparent);
 }
 
 .blog-output h3 {
@@ -705,6 +718,8 @@ footer {
   margin-bottom: 3rem;
   font-size: 2rem;
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+  letter-spacing: .15rem;
 }
 
 .blog-output .blog-info {
@@ -861,4 +876,173 @@ footer {
   height: 100px;
   padding-top: 4px;
   padding-left: 4px;
+}
+
+/* Careers */
+.careers-wrapper {
+  width: 100%;
+  height: auto;
+  background: url(/images/career-bkg.jpg);
+  color: white;
+}
+
+.careers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.searchbar {
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem;
+  background: #005a9e;
+  grid-column: 1 / all;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar label {
+  margin-right: 1rem;
+}
+
+.searchbar input {
+  min-height: 32px;
+  margin-right: auto;
+  padding-left: .25rem;
+}
+
+.searchbar button {
+  margin-right: .15rem;
+  padding: .5rem 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.search-criteria {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-criteria button {
+  width: 50%;
+  min-width: fit-content;
+  padding: .25rem .75rem;
+  background: #0078d4;
+  border: 1px solid #777;
+  font-weight: 500;
+  letter-spacing: .15rem;
+}
+
+.search-criteria ul {
+  /* display: none; */
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-criteria li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-criteria li label {
+  margin-right: .5rem;
+}
+
+.all-job-listings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.all-job-listings li {
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 2px solid #005a9e;
+}
+
+.all-job-listings .job-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: .15rem;
+}
+
+.all-job-listings .job-desc {
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Terms & Conditions */
+.terms-wrapper {
+  width: 100%;
+}
+
+.terms {
+  background: #015A9E;
+  color: white;
+  margin: auto;
+  padding: 1rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.terms h2 {
+  margin: 2rem 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+}
+
+.terms p {
+  width: 600px;
+  margin: 0 auto;
+  letter-spacing: .15rem;
+}
+
+/* Shipping */
+
+.shipping-wrapper {
+  width: 100%;
+}
+
+.shipping {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 2rem;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.shipping h1 {
+}
+
+.shipping h2 {
+  margin-bottom: 2rem;
+}
+
+.shipping p {
+  margin-bottom: 2rem;
+}
+.shipping div {
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: .75rem;
+}
+
+.shipping a {
+
 }

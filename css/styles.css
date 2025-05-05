@@ -76,7 +76,11 @@ header {
 .logo {
   height: 50px;
 }
-
+/* Responsive Navigation Button - Hidden */
+.hamburger-icon[aria-expanded="false"] {
+  border: none;
+  outline: none;
+}
 /* Navigation */
 .main-nav {
   display: block;
@@ -667,6 +671,77 @@ footer {
 } */
 
 /* Blog */
+/* Create Blog */
+
+.blog-create-wrapper {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 2rem auto 4rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+}
+
+.blog-create-wrapper h2 {
+  color: white;
+} 
+
+.blog-create-wrapper p {
+  color: white;
+}
+
+.blog-create-wrapper button {
+  color: #0078d4;
+  padding: .5rem 1rem;
+  font-weight: 600;
+}
+
+.blog-create-input {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-create-input.show {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-create-input form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.blog-create-input form label {
+  color: white;
+}
+
+.blog-create-input form input {
+  width: 300px;
+  vertical-align: center;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.blog-create-input form textarea {
+  width: 100%;
+  height: 100px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+.blog-create-input form button {
+  width: 100px;
+}
 .blog-wrapper {
   width: 100%;
   height: auto;
@@ -676,8 +751,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  background: url(/images/blog-bkg.webp);
-  color: white;
+  color: #222;
 }
 
 .blog-intro {
@@ -690,7 +764,7 @@ footer {
   color: white;
 }
 
-.blog-img h1 {
+.blog-intro h1 {
   font-size: 3rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
 }
@@ -699,33 +773,33 @@ footer {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-column: 1 / all;
-  gap: 60px;
+  row-gap: 10px;
 }
 
 .blog-output {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem 1rem;
   grid-column: 1 / 1;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border-radius: 10px 10px 0 0;
   background: linear-gradient(to bottom, #005a9e, transparent);
 }
 
 .blog-output h3 {
   width: 100%;
   display: block;
-  margin-bottom: 3rem;
   font-size: 2rem;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
   letter-spacing: .15rem;
+  color: white;
 }
 
 .blog-output .blog-info {
   width: 100%;
   display: block;
   text-align: right;
+  color: #444;
 }
 
 .blog-output .blog-desc {
@@ -738,15 +812,18 @@ footer {
 }
 
 .blog-input {
+  margin: 0 auto;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 20px;
 }
 
 .blog-input img {
+  width: 100%;
   grid-column: 1 / all;
   margin-bottom: 2rem;
+  object-fit: cover;
 }
 
 .blog-input p {
@@ -828,55 +905,6 @@ footer {
   height: 32px;
 }
 
-/* Create Blog */
-.blog-create-wrapper {
-  width: 50%;
-  max-width: 375px;
-  height: auto;
-  margin: 2rem auto 4rem;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #333;
-}
-
-.blog-create-wrapper h2 {
-  color: white;
-} 
-
-.blog-create-wrapper p {
-  color: white;
-}
-
-.blog-create-input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.blog-create-input form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #005a9e;
-}
-
-.blog-create-input form input {
-  vertical-align: center;
-  text-align: left;
-  padding-left: 4px;
-}
-
-.blog-create-input form textarea {
-  width: 100%;
-  height: 100px;
-  padding-top: 4px;
-  padding-left: 4px;
-}
 
 /* Careers */
 .careers-wrapper {

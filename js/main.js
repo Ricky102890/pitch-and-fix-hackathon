@@ -137,3 +137,102 @@ function changeMainImage(thumbnail) {
 // }
 
 // Other general site functions...
+// Blog
+// Shows / Hides Blog Form
+const createBtn = document.getElementById("createBlog");
+createBtn.addEventListener('click', () => {
+  const blogForm = document.querySelector('.blog-create-input');
+  if (!(blogForm.classList.contains('show'))) {
+    blogForm.classList.add('show');
+    createBtn.innerHTML = 'Collapse';
+  }
+  else if (blogForm.classList.contains('show')) {
+    blogForm.classList.remove('show');
+    createBtn.innerHTML = 'Create';
+  }
+});
+// Upload Picutre from Selected File Input
+const UploadBlogPictureBtn = document.getElementById('uploadPic');
+UploadBlogPictureBtn.addEventListener('click', () => {
+  const uploaded = document.getElementById('blogImgSrc');
+  const blogImagePreview = document.querySelector('.blog-img-preview');
+  let uploadSrc = uploaded.value;
+  const img = document.createElement('img');
+  img.src = uploadSrc;
+  blogImagePreview.appendChild(img);
+}) 
+// Create Blog
+// Not Fully Functional Yet
+const createBlogBtn = document.getElementById('createPost');
+createBlogBtn.addEventListener('click', createBlog);
+function createBlog() {
+  const blogList = document.querySelector('.blog-output-wrapper');
+  const blogDiv = document.createElement('div');
+  const blogTitle = document.getElementById('title').value;
+  const blogMonth = getMonth();
+  const blogDay = getDay();
+  const blogDesc = document.getElementById('desc').value;
+  const blogYear = getYear();
+  const imgSrc = document.getElementById('logImgSrc').value;
+  const blogOutline = document.getElementById('blogOutline').value;
+  const blogContent = document.getElementById('blogContent').value;
+  const blogAuthor = document.getElementById('blogAuth').value;
+  const blogMemberSince = getDate();
+  blogDiv.innerHTML =
+  `
+                <h3>${blogTitle}</h3>
+                <div class="blog-info">
+                    <span class="blog-desc">${blogDesc}</span>
+                    <span class="blog-month">${blogMonth}</span>,
+                    <span class="blog-day">${blogDay}</span>
+                    <span class="blog-year">${blogYear}</span>
+                </div>
+                <div class="blog">
+                  <div class="blog-input">
+                    <img src="${imgSrc}" alt="" class="blog-img">
+                      <p class="blog-outline">
+                        ${blogOutline}
+                      </p>
+                      <p class="blog-content">
+                        ${blogContent}
+                      </p>  
+                  </div>
+                </div>
+                <div class="blog-profile">
+                <div class="blog-author-wrapper">
+                    <h3>About <span class="blog-author-title">${blogAuthor}</span></h3>
+                    <img src="../images/blog-author-pic2.jpg" alt="" class="blog-author-pic">
+                    <p class="blog-author-desc">
+                        lorem autumn totem holdem joinem destroyem allem
+                    </p>   
+                </div>
+                <div class="blog-author-post">
+                    <div class="blog-author-header">
+                        <p>Popular Post</p>
+                    </div>
+                    <div class="blog-author-post-wrapper">
+                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
+                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
+                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
+                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
+                    </div>
+                </div>
+                <div class="blog-support">
+                    <h3>Follow Me</h3>
+                    <div class="blog-socials">
+                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
+                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
+                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
+                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
+                    </div>
+                </div>
+                <div class="blog-footer">
+                    <h3 class="blog-member-since">
+                        ${blogMemberSince}
+                    </h3>
+                </div>
+            </div>
+                
+  `
+  blogList.appendChild(blogList);
+}

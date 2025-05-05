@@ -50,30 +50,39 @@
     <div class="blog-create-wrapper">
         <h2>ShopEase Blogpost</h2>
         <p>Share with the ShopeEase Community</p>
+        <button id="createBlog">Create</button>
         <!-- Create Blog Form -->
         <div class="blog-create-input">
-            <form action="">
-                <input type="text" placeholder="Blog Title" required>
+            <form action="../pages/blog.html">
+                <label>Title</label>
+                <input type="text" placeholder="Blog Title" required id="title">
                 <br>
-                <input type="text" placeholder="Short Description" required>
-                <br>   
-                <input type="file" name="Upload Image" id="blogImg" required>
-                <button onclick="">Upload</button>
+                <label>Description</label>
+                <input type="text" placeholder="Short Description" required id="desc">
+                <br>
+                <label>Blog Image Uploader</label>   
+                <input type="file" name="Upload Image" id="blogImgSrc" required>
+                <button id="uploadPic" type="button" accept="image/*">Upload</button>
                 <div class="blog-img-preview">
-                    <img src="" alt="Blog Image">
+                    
                 </div>
                 <br>
+                <label>Outline - Your Blog Introduction</label>
                 <textarea name="Blog Outline" id="blogOutline" placeholder="Blog Outline" required></textarea>
                 <br>
+                <label>Content - Start Drafting Blog</label>
                 <textarea name="Blog Content" id="blogContent" placeholder="Blog Content" required></textarea>
                 <br>
-                <input type="text" placeholder="Author" required>
+                <label>Who made this Blog?</label>
+                <input type="text" placeholder="Author" required id="blogAuth">
                 <br>
+                <label>Link Blog to Account</label>
                 <input type="email" placeholder="Email" required>
                 <br>
+                <label>Account Authenticator</label>
                 <input type="password" placeholder="Enter Password" required>
             </form>
-            <button>Create Post</button>
+            <button id="createPost">Create Post</button>
         </div>
     </div>
 

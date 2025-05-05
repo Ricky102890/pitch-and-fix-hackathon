@@ -47,7 +47,59 @@
         </div>
     </header>
 
-<!-- Contact Div -->
+    <div class="contact-wrapper">
+        <div class="contact">
+            <div class="contact-intro">
+                <h2>Let's get you some assistance</h2>
+            </div>
+            <div class="contact-form">
+                <form action="contact.html">
+                    <div>
+                        <h3>Full Name</h3>
+                        <label>First Name</label>
+                        <input type="text">
+                        <br>
+                        <label>Middle Initial</label>
+                        <input type="text" max="1">
+                        <br>
+                        <label>Last Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <h3>Contact Info</h3>
+                        <label>Email Address</label>
+                        <input type="email">
+                        <br>
+                        <label>Confirm Email Address</label>
+                        <input type="email">
+                        <br>
+                        <h4>Phone</h4>
+                        <label>Home</label>
+                        <input type="tel">
+                        <br>
+                        <label>Cell</label>
+                        <input type="tel">
+                        <br>
+                        <label>Work</label>
+                        <input type="tel">
+                    </div>
+                    <div>
+                        <h3>Reason For Contacting</h3>
+                       <select name="issue" id="issueList">
+                        <option value="#" selected disabled>Select</option>
+                        <option value="#">Shipping Issue</option>
+                        <option value="#">Missing / Wrong Item(s)</option>
+                        <option value="#">Quality Issue</option>
+                        <option value="#">Other</option>
+                    </select>
+                    <br>
+                    <textarea name="issue-custom" id="issueCustom" placeholder="Describe the issue further">Describe in detail....</textarea> 
+                    </div>
+                    <button type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-columns">

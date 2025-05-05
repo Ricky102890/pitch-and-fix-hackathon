@@ -130,11 +130,10 @@ function changeMainImage(thumbnail) {
 
   thumbnail.classList.add("active");
 }
-
-function changeMainImg(thumbnail) {
-  // !fix
-  // Function intentionally left incomplete
-  console.log("Wrong function called");
-}
+// ! Do i need this?
+// function changeMainImg(thumbnail) {
+//   Function intentionally left incomplete
+//   console.log("Wrong function called");
+// }
 
 // Other general site functions...

@@ -52,11 +52,10 @@
                 <img id="main-product-img" src="../images/product1.jpg" alt="Wireless Headphones">
             </div>
             <div class="thumbnail-gallery">
-                <!-- Intentional bug: onclick handlers using incorrect function names -->
                 <img src="../images/pr1-1.jpg" alt="Wireless Headphones - Front" class="thumbnail active" onclick="changeMainImage(this)">
                 <img src="../images/pr1-2.jpg" alt="Wireless Headphones - Side" class="thumbnail" onclick="changeMainImage(this)">
-                <img src="../images/pr1-3.jpg" alt="Wireless Headphones - Back" class="thumbnail" onclick="changeMainImg(this)">
-                <img src="../images/pr1-1.jpg" alt="Wireless Headphones - Case" class="thumbnail" onclick="switchImage(this)">
+                <img src="../images/pr1-3.jpg" alt="Wireless Headphones - Back" class="thumbnail" onclick="changeMainImage(this)">
+                <img src="../images/pr1-1.jpg" alt="Wireless Headphones - Case" class="thumbnail" onclick="changeMainImage(this)">
             </div>
         </div>
 
@@ -90,7 +89,6 @@
                 <div class="color-options">
                     <h3>Color:</h3>
                     <div class="color-selector">
-                        <!-- Intentional bug: using classes inconsistently -->
                         <div class="color-option selected" data-color="black" style="background-color: #000;"></div>
                         <div class="color-option" data-color="white" style="background-color: #fff; border: 1px solid #ddd;"></div>
                         <div class="color-option" data-color="blue" style="background-color: #0078d4;"></div>

@@ -15,6 +15,35 @@
   .footer-columns {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* About Us */
+  .hero {
+    height: fit-content;
+    padding: .5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero a {
+    font-size: .75rem;
+    padding: .25rem .75rem;
+  }
+  .about-shop-ease-wrapper {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-main p {
+    width: 600px;
+  }
+  .about-main img {
+    width: 800px;
+    height: auto;
+    object-fit: cover;
+  }
+  .about-col-one {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Mobile Styles */
@@ -154,4 +183,35 @@
     text-align: center;
   }
 
+  /* About Us */
+  .hero {
+    height: fit-content;
+    padding: .5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero a {
+    font-size: .75rem;
+    padding: .25rem .75rem;
+  }
+  .about-shop-ease-wrapper {
+    width: 375px;
+    margin: 0 auto;
+    padding: .25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-main p {
+    width: 375px;
+  }
+  .about-main img {
+    width: 375px;
+    height: auto;
+    object-fit: cover;
+  }
+  .about-col-one {
+    display: flex;
+    flex-direction: column;
+  }
 }

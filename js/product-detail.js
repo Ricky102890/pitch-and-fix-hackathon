@@ -64,7 +64,7 @@ function setupQuantityControls() {
   if (decreaseBtn && quantityInput) {
     decreaseBtn.addEventListener("click", function () {
       let currentValue = parseInt(quantityInput.value);
-      if (currentValue > 1) {
+      if (currentValue > 0) {
         quantityInput.value = currentValue - 1;
       }
     });
@@ -73,14 +73,17 @@ function setupQuantityControls() {
   if (increaseBtn && quantityInput) {
     increaseBtn.addEventListener("click", function () {
       let currentValue = parseInt(quantityInput.value);
-      currentValue += 1;
+      if (currentValue > 0) {
+        quantityInput.value = currentValue + 1;
+
+      }
     });
   }
 
   if (quantityInput) {
     quantityInput.addEventListener("change", function () {
       // Ensure value is at least 1
-      if (this.value < 1) {
+      if (this.value = 1) {
         this.value = 1;
       }
     });

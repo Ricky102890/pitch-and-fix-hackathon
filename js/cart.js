@@ -357,13 +357,13 @@ function setupPromoCode() {
 
 // Setup checkout button
 function setupCheckoutButton() {
-  const checkoutBtn = document.getElementById("checkoutBtn");
+  const checkoutBtn = document.getElementById("checkout-Btn");
 
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", function () {
       // Redirect to checkout page (or show modal)
       alert("Proceeding to checkout...");
-      // window.location.href = '../pages/checkout.html';
+      window.location.href = 'checkout.html';
     });
   }
 }

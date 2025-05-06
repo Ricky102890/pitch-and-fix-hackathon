@@ -7,12 +7,24 @@
     <link rel="icon" type="image/x-icon" href="../images/ShopEase-logo.svg">
     <title>ShopEase - Your One-Stop Shop</title>
     <!-- CSS External Stylesheets -->
+    <link rel="stylesheet" href="../css/product-detail.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css">
 </head>
 <body>
+    <div id="topPage"></div>
+    <div class="aria" id="top">
+        <button id="aria-btn">
+            <img src="../images/aria-icon.svg" alt="Accessibility Icon">
+        </button>
+        <div class="help-cmd">
+            <button id="lightM">Light Mode</button>
+            <button id="darkM">Dark Mode</button>
+            <a href="#topPage">Scroll To Top</a>
+        </div>
+    </div>
     <header>
         <div class="logo-container">
             <img src="../images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo">
@@ -46,7 +58,7 @@
     <main class="product-detail-container">
         <div class="product-images">
             <div class="main-image">
-                <img id="main-product-img" src="../images/product1.jpg" alt="Wireless Headphones">
+                <img id="main-product-img" src="../images/product1.jpg" alt="Wireless Headphones" class="main-o">
             </div>
             <div class="thumbnail-gallery">
                 <img src="../images/pr1-1.jpg" alt="Wireless Headphones - Front" class="thumbnail active" onclick="changeMainImage(this)">
@@ -454,6 +466,7 @@
     </footer>
     <!-- JavaScript -->
     <script src="../js/product-detail.js"></script>
+    <script src="../js/features.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/cart.js"></script>
 </body>

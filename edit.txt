@@ -1,410 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Browser Tab -->
-    <link rel="icon" type="image/x-icon" href="../images/ShopEase-logo.svg">
-    <title>ShopEase - Your One-Stop Shop</title>
-    <!-- CSS External Stylesheets -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../assets/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css">
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="../images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo">
-        </div>
-        <!-- Hamburger Icon, Opens Navigation link list when viewport is mobile -->
-        <button aria-controls="main-nav" aria-expanded="false" class="hamburger-icon">
-            <img src="../images/Close-btn.svg" alt="Expand Navigation">
-        </button>
-        <nav class="main-nav" id="main-nav">
-            <ul id="nav-items">
-                <li id="nav-item"><a href="../index.html" class="active">Home</a></li>
-                <li id="nav-item"><a href="products.html">Products</a></li>
-                <li id="nav-item"><a href="categories.html">Categories</a></li>
-                <li id="nav-item"><a href="about.html">About Us</a></li>
-                <li id="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cart-container">
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
-            <div class="cart-dropdown" style="display: none;">
-                <div class="cart-items">
-                    <!-- Cart items will be added here by JavaScript -->
-                </div>
-                <div class="cart-total">
-                    <p>Total: $<span id="cart-total-amount">0.00</span></p>
-                </div>
-                <button class="checkout-btn" id="checkout-btn">Checkout</button>
-            </div>
-        </div>
-    </header>
-    <!-- Blog -->
-    <div class="blog-create-wrapper">
-        <h2>ShopEase Blogpost</h2>
-        <p>Share with the ShopeEase Community</p>
-        <button id="createBlog">Create</button>
-        <!-- Create Blog Form -->
-        <div class="blog-create-input">
-            <form action="../pages/blog.html">
-                <label>Title</label>
-                <input type="text" placeholder="Blog Title" required id="title">
-                <br>
-                <label>Description</label>
-                <input type="text" placeholder="Short Description" required id="desc">
-                <br>
-                <label>Blog Image Uploader</label>   
-                <input type="file" name="Upload Image" id="blogImgSrc" required>
-                <button id="uploadPic" type="button" accept="image/*">Upload</button>
-                <div class="blog-img-preview">
-                    
-                </div>
-                <br>
-                <label>Outline - Your Blog Introduction</label>
-                <textarea name="Blog Outline" id="blogOutline" placeholder="Blog Outline" required></textarea>
-                <br>
-                <label>Content - Start Drafting Blog</label>
-                <textarea name="Blog Content" id="blogContent" placeholder="Blog Content" required></textarea>
-                <br>
-                <label>Who made this Blog?</label>
-                <input type="text" placeholder="Author" required id="blogAuth">
-                <br>
-                <label>Link Blog to Account</label>
-                <input type="email" placeholder="Email" required>
-                <br>
-                <label>Account Authenticator</label>
-                <input type="password" placeholder="Enter Password" required>
-            </form>
-            <button id="createPost">Create Post</button>
-        </div>
-    </div>
+Documentation 
 
-    <!-- Published Blogs -->
-    <div class="blog-wrapper">
-        <div class="blog-intro">
-            <h1>ShopEase Blogpost</h1>
-        </div>
-        <!-- Blog #1 -->
-        <div class="blog-output-wrapper">
-            <div class="blog-output">
-                <h3>Seasonal Fashion Tips</h3>
-                <div class="blog-info">
-                    <span class="blog-desc">Shop smart before the seasonal change</span>
-                    <div>
-                        <span class="blog-month">June</span>
-                        <span class="blog-day">25</span>
-                        <span class="blog-year">2025</span>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="blog">
-                <div class="blog-input">
-                <img src="../images/blog-main-pic" alt="" class="blog-img">
-                    <p class="blog-outline">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <p class="blog-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    </p>  
-                </div>
-            </div>
-            <div class="blog-profile">
-                <div class="blog-author-wrapper">
-                    <h3>About <span class="blog-author-title">Donald Frezco</span></h3>
-                    <img src="../images/blog-author-pic2.jpg" alt="" class="blog-author-pic">
-                    <p class="blog-author-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quod culpa vero ad, rerum dolor iusto!
-                    </p>   
-                </div>
-                <div class="blog-author-post">
-                    <div class="blog-author-header">
-                        <p>Popular Post</p>
-                    </div>
-                    <div class="blog-author-post-wrapper">
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                    </div>
-                </div>
-                <div class="blog-support">
-                    <h3>Follow Me</h3>
-                    <div class="blog-socials">
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog #2 -->
-        <div class="blog-output-wrapper">
-            <div class="blog-output">
-                <h3>Hidden Gems - Consumer Tech</h3>
-                <div class="blog-info">
-                    <span class="blog-desc">Pre Order the right way</span>
-                    <div>
-                       <span class="blog-month">June</span>
-                        <span class="blog-day">25</span>
-                        <span class="blog-year">2025</span> 
-                    </div>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="blog-input">
-                <img src="../images/blog-main-pic3.jpg" alt="" class="blog-img">
-                    <p class="blog-outline">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <p class="blog-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    </p>  
-                </div>
-            </div>
-            <div class="blog-profile">
-                <div class="blog-author-wrapper">
-                    <h3>About <span class="blog-author-title">Cody Baker</span></h3>
-                    <img src="../images/blog-author-pic3.jpg" alt="" class="blog-author-pic">
-                    <p class="blog-author-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quod culpa vero ad, rerum dolor iusto!
-                    </p>   
-                </div>
-                <div class="blog-author-post">
-                    <div class="blog-author-header">
-                        <p>Popular Post</p>
-                    </div>
-                    <div class="blog-author-post-wrapper">
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                    </div>
-                </div>
-                <div class="blog-support">
-                    <h3>Follow Me</h3>
-                    <div class="blog-socials">
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog #3 -->
-        <div class="blog-output-wrapper">
-            <div class="blog-output">
-                <h3>Let's get Outside!!!</h3>
-                <div class="blog-info">
-                    <span class="blog-desc">Atheltes Welcome</span>
-                    <div>
-                      <span class="blog-month">June</span>
-                        <span class="blog-day">25</span>
-                        <span class="blog-year">2025</span>  
-                    </div>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="blog-input">
-                <img src="../images/blog-main-pic2" alt="" class="blog-img">
-                    <p class="blog-outline">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <p class="blog-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    </p>  
-                </div>
-            </div>
-            <div class="blog-profile">
-                <div class="blog-author-wrapper">
-                    <h3>About <span class="blog-author-title">Janice Price</span></h3>
-                    <img src="../images/blog-author-pic.jpg" alt="" class="blog-author-pic">
-                    <p class="blog-author-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quod culpa vero ad, rerum dolor iusto!
-                    </p>   
-                </div>
-                <div class="blog-author-post">
-                    <div class="blog-author-header">
-                        <p>Popular Post</p>
-                    </div>
-                    <div class="blog-author-post-wrapper">
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                    </div>
-                </div>
-                <div class="blog-support">
-                    <h3>Follow Me</h3>
-                    <div class="blog-socials">
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog #4 -->
-        <div class="blog-output-wrapper">
-            <div class="blog-output">
-                <h3>Keeping it BLACK</h3>
-                <div class="blog-info">
-                    <span class="blog-desc">Stop wasting money fading your Dark Clothing</span>
-                    <div>
-                       <span class="blog-month">June</span>
-                        <span class="blog-day">25</span>
-                        <span class="blog-year">2025</span> 
-                    </div>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="blog-input">
-                  <img src="../images/blog-main-pic4.jpg" alt="" class="blog-img">
-                    <p class="blog-outline">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <p class="blog-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Provident ipsam in vel tempore cum, libero voluptatibus excepturi quos doloribus 
-                    sunt nihil ea officia eaque facere rem iusto quaerat. Animi, eaque eum libero 
-                    voluptate ex delectus laudantium est eveniet optio ipsa?
-                    </p>  
-                </div>
-            </div>
-            <div class="blog-profile">
-                <div class="blog-author-wrapper">
-                    <h3>About <span class="blog-author-title">James Drake</span></h3>
-                    <img src="../images/blog-author-pic4.jpg" alt="" class="blog-author-pic">
-                    <p class="blog-author-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quod culpa vero ad, rerum dolor iusto!
-                    </p>   
-                </div>
-                <div class="blog-author-post">
-                    <div class="blog-author-header">
-                        <p>Popular Post</p>
-                    </div>
-                    <div class="blog-author-post-wrapper">
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                        <a href="#"><img src="../images/blog-post-img1.jpg" alt="" class="blog-post-img"></a>
-                    </div>
-                </div>
-                <div class="blog-support">
-                    <h3>Follow Me</h3>
-                    <div class="blog-socials">
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                        <a href="#"><img src="../images/fb-icon.svg" alt="Facebook" class="social-img-link"></a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h3>Shop</h3>
-                <ul>
-                    <li><a href="products.html">All Products</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="deals.html">Deals</a></li>
-                    <li><a href="new-arrivals.html">New Arrivals</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="shipping.html">Shipping & Returns</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
+PITCH & FIX HACK-A-THON
+BY CLESTER JACKSON / CJAX.DEV
 
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                    <li><a href="https://x.com"><i class="fab fa-twitter"></i>Twitter</a></li>
-                    <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>Instagram</a></li>
-                    <li><a href="https://pinterest.com"><i class="fab fa-pinterest"></i>Pinterest</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
-        </div>
-    </footer>
+PHASE 1 - CONSUMER / DEV BETA TESTING
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/features.js" defer></script>
-</body>
+WALKTHROUGH CURRENT SITE (ON ALL MAJOR BROWSERS)
+TAKE NOTES OF LAYOUT ISSUES(SCALING, READABILITY, ACCESSIBILITY, ETC.)
+INTERACT WITH EVERY COMPONENT ON WEB PAGES
+TEST WEBSITE RESPONSIVENESS (USING RESPONSIVE VIEWER EXTENSION)
+TAKE NOTES OF ANY ERRORS (NAVIGATION, IMAGES, EVENTS ETC.)
+TEST SITE AS CONSUMER (ADD TO CART, CHECKOUT, ETC.)
+
+
+PHASE 2 - DEV BRANCH EDITS
+
+USE THE NOTES TAKEN FROM BETA TESTING TO CREATE A LIST OF FIXES IN A SEQUENCE STARTING FROM HTML5, THEN CSS, AND JAVASCRIPT
+AFTER BUG FIX TO DO LIST IS COMPILED, CREATE A BUG FIX BRANCH
+FIX ISSUES, COMMIT CHANGES, MAKE IDE NOTES AND TEST CHANGES
+
+PHASE 3 - FINAL TEST OF CONSTRUCTED WEBSITE & APPLIED EDITS
+
+TEST WEBSITE AND ALL THE PAGES AND INTERACTIVE FUNCTIONALITY
+MERGE BUG FIX BRANCH INTO MAIN BRANCH
+
+PHASE 4 - PROJECT FINALIZATION 
+
+CREATE A VIDEO (LOOM) TO SHOWCASE THE BUG FIXES
+CREATE A VIDEO (LOOM) TO SHOWCASE NEW FEATURES
+CREATE A VIDEO (LOOM) SHOWCASING THE FINAL PRODUCT
+SUBMIT ALL FILES AND LINKS ASSOCIATED WITH PITCH & FIX PROJECT
+
+PITCH & FIX HACK-A-THON
+BY CLESTER JACKSON / CJAX.DEV
+
+TO DO LIST
+
+PHASE 1
+ Nav link need hover effect - Color change, font size growth, text decor underline(b4 and after)--COOL ADDITION 
+Nav logo transition effect–EXTRA EDIT, NOT IMPORTANT, TECHNICALLY A FEATURE
+Add to cart product event output is NAN, and name of product is undefined - edit js code to output correct item–COMPLETE
+*smart watch product add to cart not accurate (missing title, desc, and total)--COMPLETE
+Add to cart click away event not working - needs event to close window with close button, click away event etc.--COMPLETE MAYBE ADD WINDOW CLICK EVENT IN ADDITION TO TOGGLE THAT ALREADY EXIST
+Subscribe button isnt working–COMPLETE
+Cart option does not refresh when adding product after clearing cart - onChange event–COMPLETE
+Sports and outdoors categories div is to large - change font sizes on categories–HMM
+Footer item groups aren't centered–COMPLETE
+Large mobile viewport needs a responsive grid layout of 2 X 2 with auto fill property–COMPLETE
+Large mobile viewport footer links to large and need rescaling–COMPLETE
+Large mobile viewport needs a wrap property or a responsive grid layout–COMPLETE
+Large mobile viewport follow us div group needs similar font sizes compared to the other footer group items–COMPLETE
+@625px navigation div breaks - needs a event to hide nav and show hamburger icon—COMPLETE
+Center footer links and title on mobile viewports–COMPLETE
+Wrap subscribe input and button - block or flex wrap–COMPLETE
+Hamburger menu for mobile and smaller viewports–COMPLETE
+Alignment on products on laptop (avg viewport sizes) isn't centered- needs an alignment with flex/grid to be centered depending on axis
+Checkout button isnt working - send data to checkout page, opens checkout page onclick event, adds totals including taxes, shipping, and other fees
+Nav links are broken–COMPLETE
+Product links no images loaded - implement backup image code–COMPLETE
+Placeholder content is showing code - edit content–COMPLETE
+Footer links need transition timing edit - 700ms timing—COOL ADDITION 
+Set timeout for removing message does not have duration—COMPLETE
+Cart item delete button is misaligned - Needs flex adjustment—COMPLETE
+Subscribe button size increases on mobile viewport- Not aligned with input—COMPLETE
+Removing Top item from cart removes all–COMPLETE
+Delete button in cart is below the item which can cause issues and accidents since its close to other items- positioning it to the right as most ux has close button on top right side–COMPLETE
+Padding inside of dropdown cart is to small–COMPLETE
+Add image to cart item—STAND OUT FROM THE REST
+Add to cart message Missing, maybe js or css absent–COMPLETE
+MIssing closed anchor tag with facebook social link—COMPLETE
+Update Cart Dropdown Count upon Adding Item to cart
+Logo not showing on Product details page–COMPLETE
+
+
+
+PHASE 2
+Cart Icon’s Z Index was behind Cart Drop Down Menu - Changed Z Index 
+When Viewport is mobile sizes navigation is displayed as column to fit viewport
+Added Hamburger Icon when viewport size is mobile (breaks at mobile)
+Hide the navigation as it does not fit screen, Hamburger icon click event shows navigation menu and hides icon, Option to hide navigation link is shown with a close button which hides menu again when close button event is triggered
+Add to Cart Click Event Is Not Displaying Updated Cart Unless manually toggling cart icon - Added displayCartDropdown function to addToCart Functions If and Else statements - Now when adding to cart we can see the changes and calculations immediately
+ Added 3000ms to set time out function that removes message after 3 secs
+Smart watch adds price to total in cart and displays current price-was missing data attribute which before correction evaluated as NAN
+Fixed Placeholder in Subscribe Input/Textarea- Attribute used both single and double quotes-For consistency i used double quotes on all attributes
+Fixed Button size and layout in dropdown cart menu- aligned and resized with definitive width and height that fit to any viewport since dropdown cart has defined width
+Removing items was fixed as the method deleted 2 items after selected deletion, Fix by deleting only the selected index by changing second parameter to 1
+Added padding to the cart item to give space from close buttons and scroll bar
+Create a style for the success message and closed the gap inside the template string with a hyphen and connected it to the variable passed as an argument
+Added closing anchor tag to facebook link on index.html and product-details.html
+Created Additional Pages- About US & Blog–NEEDS SOME CSS AND JS ADDITIONS
+Updated total to multiply the item price (per item) by item quantity
+Logo is now showing on product details page, needed correct relative path
+
+PHASE 3 
+Test Page 
